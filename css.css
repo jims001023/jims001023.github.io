@@ -1,0 +1,565 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+body{
+    min-height: 1000px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+    background-color: black;
+}
+
+header .logo{ /*estilo para el logo*/
+font-weight: 700;
+color: rgb(199,108,18);
+text-decoration: none;
+font-size: 2em;
+text-transform: uppercase;
+letter-spacing: 1px;
+transition: 0.6s;
+
+}
+
+/*estilo para el ul y li*/
+header ul{
+    display: flex;
+    justify-content: center;
+}
+header ul li{
+    list-style: none; 
+}
+header ul li a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+/*parte del javascript*/
+header.sticky{
+    padding: 5px 100px;
+    background: #000;
+    border-bottom: 10px solid rgba(0, 0,0, .5);
+    transition: .5s;
+}
+
+
+header.sticky .logo,
+header.sticky ul li a{
+    color:blue;
+}
+
+/*estilos del banner*/
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background: url(16498111930984.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+.banner h2{
+color: rgb(219,95,12);
+font-size: 45px;
+text-transform: uppercase;
+text-align: center;
+line-height: 1em;
+}
+.banner h2 span{
+    color:  #fff;
+}
+/*estilos que se le otorgaran a todas las secciones*/
+.sec{
+    background: rgb(92, 90, 90);
+    padding: 100 px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Kanit', sans-serif;
+    align-items: center;
+    
+}
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+   
+    
+}
+.mxw800p{
+    max-width: 800px;
+    margin: auto;
+    
+    
+}
+.btn{
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+h3{
+    
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #000000e3;
+}
+/*le otorgaremos estilo a services*/
+.services{
+    display: grid;
+    /*grid-template-columns: auto auto auto;*/
+    /*grid-template-columns: repeat(3 ,auto);*/
+    grid-template-columns: repeat(auto-fit ,minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    background:  rgb(167, 90, 3);
+    padding: 20px;
+    box-shadow: 0px 20px 25px #ffffff;
+    
+}
+.services .box .iconBx{
+    margin-top: 25px;
+}
+.services .box .iconBx img{
+    max-width: 100px;
+    margin-bottom: 15px;
+    
+}
+.services .box h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+.stats{
+    background: #000;
+    padding-top: 250px;
+    margin-top: -200px;
+}
+.stats h3,
+p{
+    color: #fff;
+}
+.statsBox{
+    display: grid;
+    /*grid-template-columns: auto auto auto auto;*/
+    grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+}
+.statsBox h2{
+    color: #fff;
+    font-size: 36px;
+}
+.statsBox h4{
+    color: #fff;
+    font-size: 16 px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/*
+nuevo
+en caso de lista
+.services.box. ul{
+    width: 50%;
+    list-style-type: square;
+    list-style-position: inside;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.stats{
+    background:#000;
+    margin-top: -250 px;
+    padding-top: 250 px;
+}
+
+.stats h3, 
+.stats p { la coma quiere decir que el estilo que le otorgemos 
+   color: #fff;
+}
+.statsBox{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    max-width: 100%;
+    grid-gap:20px ;
+}
+.statsBox h2{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+
+}
+.statsBox h4{
+    color: #fff;
+}*/
+
+
+/*nuevo de portafolio*/
+.workBx{
+position: relative;
+display: grid;
+/*grid-template-columns: auto auto auto auto;*/
+grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+grid-gap: 10px;
+max-width: 100%;
+margin-top: 40px;
+}
+
+.workBx .brand{
+    position: relative;
+ /*   background: #a84a0b;*/
+    background: rgb(129, 77, 3);
+    background: url(this.jpg);
+    height: 330px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /*ajustamos el contenido de la caja, a traves del eje horizontal*/
+    align-items: center;
+}
+.workBx .brand:hover{
+    background: #000;
+    
+}
+.workBx .brand a{
+    text-decoration: none;
+    color:rgba(78, 69, 69, 0.986);
+    text-transform: uppercase;
+}
+/* para la seccion team*/
+.teamBx{
+    position: relative;
+    display: grid;
+    /*grid-template-columns: auto auto auto auto;*/
+    grid-template-columns: repeat(auto-fit ,minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+.teamBx .member{
+    position: relative;
+    background: #000;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teamBx .member .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.teamBx .member .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.teamBx .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: 0.2s;
+    opacity: 0;
+}
+.teamBx .member .details:hover{
+    opacity: 1;
+}
+.teamBx .member .details h2{
+    color:gray;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.teamBx .member .details h2 span{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+/*para el slider*/
+
+.slider{
+    position: relative;
+}
+.slider-items{
+    overflow: hidden;
+}
+@keyframes zoom {
+    0%{ transform: scale(1.2); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;}
+}
+.slider-items .item{
+    display: none;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    animation: zoom 1s;
+}
+.slider-items .item img{
+    max-width: 100%;
+    display: block;
+}
+.slider-items .item.active{
+    display: block;
+}
+.slider-items .item .caption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color :#000;
+    background: rgba(255, 255,255, 0.5);
+    font-size: 20px;
+}
+.slider .left-slide, .slider .right-slide{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: #444444;
+    color:#fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider .left-slide{
+left: 10px;
+}
+.slider .right-slide{
+right: 10px;
+}
+.slider .left-slide:hover, 
+.slider .right-slide:hover{
+    background:orangered;
+}
+/* para la seccion del formulario*/
+.contact {
+    background: url(twune.jpeg);
+}
+.contact h3, .contact p{
+    color:white;
+}
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.contactForm form{
+    width: 100%;
+}
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+}
+.contactForm .row100 .inputBx50{
+    width: 50%;
+    margin: 0 20px;
+}
+.contactForm .row100 .inputBx100{
+    width: 100%;
+    margin: 0 20px; 
+}
+.contactForm .row100 input,
+.contactForm .row100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: gray;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    font-size: 10px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+.contactForm .row100 textarea{
+    height: 100px;
+}
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color: orangered;
+    font-weight: 1000;
+    font-family: 'Kanit', sans-serif;;
+}
+.contactForm .row100 input[type="submit"]{
+    background: rgb(199,108,18);
+    color: #000;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+#text, #nom, #acid, #men{
+    display:block;
+    color:white;
+    font-weight: 500;
+    padding: 1px;
+    text-align: left;
+    margin-top: -10px;
+}
+
+.sci{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.sci ul{
+    display: flex;
+}
+.sci ul li{
+    list-style: none;
+}
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+.sci ul li a img{
+    /*filter: invert(1);*/
+    max-width: 40px;
+}
+.sci ul li a:hover img{
+    opacity: 0.5;
+}
+#button-up{
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 4px solid transparent;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    transition: all 300ms ease;
+    transform: scale(1);
+    box-shadow: 0px 20px 25px white;
+}
+#button-up:hover{
+    transform: scale(1.1);
+    border-color: black;
+}
+/*-------------------------------------------------*/
+        /*estilos para pantalla mas pequeña*/
+/*-------------------------------------------------*/
+@media(max-width:900px){
+    .btnMenu{
+        position: relative;
+        width: 30px;
+        height: 30px;
+
+        cursor: pointer;
+    }
+    .btnMenu::before{
+        content: "";
+        top: 4px;
+        position:absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        box-shadow: 0 10px 0 black;
+    }
+    .btnMenu::after{
+        content: "";
+        bottom: 4px;
+        position:absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+    }
+
+    header,
+    header.sticky{
+        padding: 5px 50px;
+        background: cadetblue;
+    }
+    header .logo,
+    header ul li a{
+        color: #000;
+    }
+    header ul{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        visibility: hidden;
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+    }
+
+    header.active ul li a{
+        margin: 10px 0;
+        display: inline-block;
+        font-size: 20px;
+    }
+    header.active ul{
+        visibility: visible;
+        display: block;
+        padding-top: 20px;
+    }
+
+}
